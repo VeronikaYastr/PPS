@@ -18,3 +18,6 @@ C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\UniversitySite\o
 C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\UniversitySite\obj\Debug\UniversitySite.csproj.CoreCompileInputs.cache
 C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\UniversitySite\obj\Debug\UniversitySite.exe
 C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\UniversitySite\obj\Debug\UniversitySite.pdb
+C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\UniversitySite\obj\Debug\UniversitySite.ChooseAction.resources
+C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\UniversitySite\obj\Debug\UniversitySite.FindInfo.resources
+C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\UniversitySite\obj\Debug\UniversitySite.RequestFindForm.resources

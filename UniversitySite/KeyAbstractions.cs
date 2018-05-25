@@ -35,8 +35,8 @@ namespace UniversitySite
     {
 
         getInfo = 1,
-        changeInfo,
-        checkInfo
+        addInfo,
+        updateInfo
 
     }//end TypeOfRequest
 

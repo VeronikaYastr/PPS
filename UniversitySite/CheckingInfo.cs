@@ -16,20 +16,35 @@ namespace UniversitySite {
 	/// <summary>
 	/// Проверка введенной информации
 	/// </summary>
-	public class CheckingInfo {
+	public static class CheckingInfo {
 
-		/// 
-		/// <param name="username"></param>
-		public bool CheckAccess(string username){
+        /// 
+        /// <param name="userType"></param>
+        /// <param name="reqType"></param>
+        public static bool CheckAccess(TypeOfUser userType, TypeOfRequest reqType){
+            if (reqType == TypeOfRequest.addInfo && userType == TypeOfUser.administrator)
+                return true;
+            if (reqType == TypeOfRequest.updateInfo && userType == TypeOfUser.university_worker)
+                return true;
+            if (reqType == TypeOfRequest.getInfo)
+                return true;
 
-			return false;
+            return false;
 		}
 
 		/// 
 		/// <param name="info"></param>
-		public bool CheckCorectness(string info){
-
-			return false;
+		public static bool CheckCorectness(string info){
+            int year = 0;
+            try
+            {
+                year = Int32.Parse(info);
+            }
+            catch(Exception ex)
+            {
+                return false;
+            }
+           return year > 1950 && year < 2019;
 		}
 
 	}//end <<control>> CheckingInfo

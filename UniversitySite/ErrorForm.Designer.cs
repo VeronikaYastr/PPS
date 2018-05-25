@@ -48,6 +48,7 @@
             this.Controls.Add(this.ResultLabel);
             this.Name = "ErrorForm";
             this.Text = "ErrorForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ErrorForm_FormClosing);
             this.Load += new System.EventHandler(this.ErrorForm_Load);
             this.ResumeLayout(false);
 

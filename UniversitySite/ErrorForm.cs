@@ -22,5 +22,11 @@ namespace UniversitySite
         {
 
         }
+
+        private void ErrorForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Form form1 = System.Windows.Forms.Application.OpenForms["LoginForm"]; ;
+            form1.Close();
+        }
     }
 }

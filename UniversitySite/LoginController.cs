@@ -15,25 +15,7 @@ using System.Data;
 
 namespace UniversitySite {
 	public static class  LoginController {
-        static SQLiteConnection m_dbConn;
-        static SQLiteCommand m_sqlCmd;
-
-        private static void ConnectDB()
-        {
-            m_dbConn = new SQLiteConnection();
-            m_sqlCmd = new SQLiteCommand();
-
-            try
-            {
-                m_dbConn = new SQLiteConnection("Data Source= UniverInfo.db;Version=3;");
-                m_dbConn.Open();
-                m_sqlCmd.Connection = m_dbConn;
-            }
-            catch (SQLiteException ex)
-            {
-                
-            }
-        }
+       
 		/// 
 		/// <param name="login"></param>
 		private static bool CheckLogin(string login){
@@ -50,41 +32,46 @@ namespace UniversitySite {
             return (password.Length != 0 && password.Length <= maxLen);
         }
 
-		public static User MakeUser(string login, string password){
-            ConnectDB();
-            
-            String sqlQuery;
+        public static User MakeUser(string login, string password)
+        {
+            SQLiteConnection m_dbConn = new SQLiteConnection("Data Source= C:\\Users\\Veronika\\Desktop\\programming\\labs_4\\PPS\\UniversitySite\\Database.db;Version=3;");
+            m_dbConn.Open();
+
             User user = null;
+            string sqlQuery = "SELECT TypeID FROM 'USER' WHERE LOGIN =\"" + login + "\"";
+            sqlQuery += " AND PASSWORD=\"" + password + "\";";
+            SQLiteCommand comm = new SQLiteCommand(sqlQuery, m_dbConn);
+            SQLiteDataReader reader = comm.ExecuteReader();
+
+            string str = "";
 
             try
             {
                 if (CheckLogin(login) && CheckPassword(password))
                 {
-                    sqlQuery = "SELECT TypeID FROM USER WHERE LOGIN = " + login;
-                    sqlQuery += " AND PASSWORD= " + password;
-
-                    m_sqlCmd.CommandText = sqlQuery;
-                    var reader = m_sqlCmd.ExecuteReader();
-
-                    String str = "";
                     if (reader.HasRows)
                     {
                         while (reader.Read())
-                            str = reader.GetString(0);
+                            str = reader[0].ToString();
                     }
+                    m_dbConn.Close();
+
+                    if (str.Length == 0)
+                        return null;
 
                     int type = Int32.Parse(str);
 
                     user = new User(login, password, type);
                     return user;
-                  
                 }
             }
             catch (SQLiteException ex)
             {
+
             }
+
             return user;
-		}
+        }
 
 	}//end <<controller>> LoginController
 

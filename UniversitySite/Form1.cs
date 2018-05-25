@@ -26,14 +26,18 @@ namespace UniversitySite
         {
             string login = TextLogin.Text;
             string password = TextPassword.Text;
-            TextLogin.Text = password;
 
             User user = LoginController.MakeUser(login, password);
-            if(user == null)
+            if (user == null)
             {
+                MessageBox.Show("Incorrect login or password. Try again!");
+            }
+            else
+            {
+                MessageBox.Show("You are welcome:)");
                 this.Hide();
-                ErrorForm Error = new ErrorForm("Login failed!");
-                Error.Show();
+                ChooseAction Action = new ChooseAction(user);
+                Action.Show();
             }
         }
 
