@@ -78,6 +78,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddInfo.Designer.cs">
+      <DependentUpon>AddInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddingInformation.cs" />
     <Compile Include="CheckingInfo.cs" />
     <Compile Include="ChooseAction.cs">
@@ -105,8 +111,25 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="KeyAbstractions.cs" />
+    <Compile Include="ListOfLeaders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListOfLeaders.Designer.cs">
+      <DependentUpon>ListOfLeaders.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginController.cs" />
-    <Compile Include="ProcessingSystem.cs" />
+    <Compile Include="MaxScore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaxScore.Designer.cs">
+      <DependentUpon>MaxScore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PlanOfAdmission.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PlanOfAdmission.Designer.cs">
+      <DependentUpon>PlanOfAdmission.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RequestFindForm.cs">
@@ -115,8 +138,10 @@
     <Compile Include="RequestFindForm.Designer.cs">
       <DependentUpon>RequestFindForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ShowingResult.cs" />
     <Compile Include="UpdatingInformation.cs" />
+    <EmbeddedResource Include="AddInfo.resx">
+      <DependentUpon>AddInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChooseAction.resx">
       <DependentUpon>ChooseAction.cs</DependentUpon>
     </EmbeddedResource>
@@ -128,6 +153,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListOfLeaders.resx">
+      <DependentUpon>ListOfLeaders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaxScore.resx">
+      <DependentUpon>MaxScore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PlanOfAdmission.resx">
+      <DependentUpon>PlanOfAdmission.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

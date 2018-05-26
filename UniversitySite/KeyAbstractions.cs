@@ -10,8 +10,8 @@ namespace UniversitySite
     public enum FormOfEducation : int
     {
 
-        extramuralForm = 1,
-        intramuralForm,
+        intramuralForm = 1,
+        extramuralForm,
         partTimeForm
 
     }//end FormOfEducation
@@ -49,6 +49,31 @@ namespace UniversitySite
         private string Name { get; set; }
         private string ShortName { get; set; }
 
+        public Faculty(int code, string name)
+        {
+            Code = code;
+            Name = name;
+            ShortName = name.Substring(0, 2);
+        }
+
+    }//end <<entity>> Faculty
+
+    /// <summary>
+    /// кафедра
+    /// </summary>
+    public class Department
+    {
+        private int Code { get; set; }
+        private string Name { get; set; }
+        private string ShortName { get; set; }
+
+        public Department(int code, string name)
+        {
+            Code = code;
+            Name = name;
+            ShortName = name.Substring(0, 2);
+        }
+
     }//end <<entity>> Faculty
 
     /// <summary>
@@ -59,8 +84,16 @@ namespace UniversitySite
         private string Name { get; set; }
         private string ScDegree { get; set; }
         private string ScRank { get; set; }
-        private string StartDate { get; set; }
-        private string EndDate { get; set; }
+        private int StartDate { get; set; }
+        private int EndDate { get; set; }
+
+        public Head(int year, string name, string degree, string rank)
+        {
+            StartDate = year;
+            Name = name;
+            ScDegree = degree;
+            ScRank = rank;
+        }
     }//end <<entity>> Head
 
     /// <summary>
@@ -76,7 +109,7 @@ namespace UniversitySite
         {
             Login = login;
             Password = password;
-            Type = (TypeOfUser)Enum.GetValues(typeof(TypeOfUser)).GetValue(type);
+            Type = (TypeOfUser)Enum.GetValues(typeof(TypeOfUser)).GetValue(type - 1);
         }
 
     }//end <<entity>>User
@@ -85,6 +118,14 @@ namespace UniversitySite
     {
         private string Name { get; set; }
         private int PassingScore { get; set; }
+        private int Year { get; set; }
+
+        public Subject(int score, string name, int year)
+        {
+            Name = name;
+            PassingScore = score;
+            Year = year;
+        }
     }
 
     /// <summary>
@@ -95,43 +136,13 @@ namespace UniversitySite
         private int Code { get; set; }
         private string Name { get; set; }
         private string ShortName { get; set; }
+
+        public Speciality(int code, string name)
+        {
+            Code = code;
+            Name = name;
+            ShortName = name.Substring(0, 2);
+        }
     }//end <<entity>> Speciality
 
-    /// <summary>
-    /// Запрос в базу данных
-    /// </summary>
-    public class Request {
-
-	private string information;
-    private TypeOfRequest type;
-
-	public Request()
-    {
-
-    }
-
-    ~Request()
-    {
-
-    }
-
-    public void getInfo()
-    {
-
-    }
-
-    public void getType()
-    {
-
-    }
-
-    /// 
-    /// <param name="information"></param>
-    /// <param name="type"></param>
-    public void MakeRequest(string information, TypeOfRequest type)
-    {
-
-    }
-
-}//end <<entity>> Request
 }

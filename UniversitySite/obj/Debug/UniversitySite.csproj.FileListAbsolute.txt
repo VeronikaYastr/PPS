@@ -21,3 +21,7 @@ C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\UniversitySite\o
 C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\UniversitySite\obj\Debug\UniversitySite.ChooseAction.resources
 C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\UniversitySite\obj\Debug\UniversitySite.FindInfo.resources
 C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\UniversitySite\obj\Debug\UniversitySite.RequestFindForm.resources
+C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\UniversitySite\obj\Debug\UniversitySite.ListOfLeaders.resources
+C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\UniversitySite\obj\Debug\UniversitySite.PlanOfAdmission.resources
+C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\UniversitySite\obj\Debug\UniversitySite.MaxScore.resources
+C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\UniversitySite\obj\Debug\UniversitySite.AddInfo.resources

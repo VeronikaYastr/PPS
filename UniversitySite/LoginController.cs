@@ -67,7 +67,7 @@ namespace UniversitySite {
             }
             catch (SQLiteException ex)
             {
-
+                
             }
 
             return user;

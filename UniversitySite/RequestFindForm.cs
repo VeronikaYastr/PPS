@@ -24,7 +24,24 @@ namespace UniversitySite
 
         private void ButtonFind_Click(object sender, EventArgs e)
         {
-
+            if(RBLeaders.Checked)
+            {
+                this.Hide();
+                ListOfLeaders form = new ListOfLeaders(year);
+                form.Show();
+            }
+            if(RBSpecialities.Checked || RBPlan.Checked)
+            {
+                this.Hide();
+                PlanOfAdmission form = new PlanOfAdmission(edForm, year);
+                form.Show();
+            }
+            if (RBMaxScore.Checked)
+            {
+                this.Hide();
+                MaxScore form = new MaxScore(year);
+                form.Show();
+            }
         }
 
         private void RequestFindForm_FormClosing(object sender, FormClosingEventArgs e)

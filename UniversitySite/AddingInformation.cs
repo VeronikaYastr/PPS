@@ -16,59 +16,78 @@ namespace UniversitySite {
 	/// <summary>
 	/// Добавление информации в банк данных
 	/// </summary>
-	public class  AddingInformation {
+	public static class  AddingInformation {
+
+        public static bool AddInfo(Department dep, Speciality spec, Faculty fac,Head head, string address, string phone, string site, int year, FormOfEducation form)
+        {
+            if (dep != null)
+                AddDepartment(dep);
+            if (head != null)
+                AddHead(head);
+            if (address.Length != 0)
+                AddAddress(address);
+            if (phone.Length != 0)
+                AddPhone(phone);
+            if (site.Length != 0)
+                AddWebsite(site);
+            AddForm(form);
+
+            return AddForm(form);
+        }
+
+
         /// 
         /// <param name="item"></param>
-        public bool addAddress(string item){
+        public static bool AddAddress(string item){
 
 			return false;
 		}
 
 		/// 
 		/// <param name="item"></param>
-		public bool addDepartment(string item){
-
+		public static bool AddDepartment(Department item){
+            
 			return false;
 		}
 
 		/// 
 		/// <param name="item"></param>
-		public bool addFaculty(string item){
+		public static bool AddFaculty(Faculty item){
 
 			return false;
 		}
 
 		/// 
 		/// <param name="form"></param>
-		public bool addForm(FormOfEducation form){
+		public static bool AddForm(FormOfEducation form){
 
 			return false;
 		}
 
 		/// 
 		/// <param name="item"></param>
-		public bool addHead(Head item){
+		public static bool AddHead(Head item){
 
 			return false;
 		}
 
 		/// 
 		/// <param name="item"></param>
-		public bool addPhone(string item){
+		public static bool AddPhone(string item){
 
 			return false;
 		}
 
 		/// 
 		/// <param name="item"></param>
-		public bool addSpeciality(string item){
+		public static bool AddSpeciality(Speciality item){
 
 			return false;
 		}
 
 		/// 
 		/// <param name="item"></param>
-		public bool addWebsite(string item){
+		public static bool AddWebsite(string item){
 
 			return false;
 		}

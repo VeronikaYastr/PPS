@@ -35,28 +35,33 @@ namespace UniversitySite
             {
                 req = TypeOfRequest.updateInfo;
             }
-            
+
             if (!CheckingInfo.CheckAccess(user.Type, req))
                 MessageBox.Show("Access is denied!");
-
-            switch (req)
+            else
             {
-                case TypeOfRequest.getInfo:
-                    {
-                        this.Hide();
-                        FindInfo form = new FindInfo();
-                        form.Show();
-                        break;
-                    }
-                case TypeOfRequest.addInfo:
-                    {
-                        break;
-                    }
-                case TypeOfRequest.updateInfo:
-                    {
-                        break;
-                    }
-                default:break;
+                switch (req)
+                {
+                    case TypeOfRequest.getInfo:
+                        {
+                            this.Hide();
+                            FindInfo form = new FindInfo();
+                            form.Show();
+                            break;
+                        }
+                    case TypeOfRequest.addInfo:
+                        {
+                            this.Hide();
+                            AddInfo form = new AddInfo();
+                            form.Show();
+                            break;
+                        }
+                    case TypeOfRequest.updateInfo:
+                        {
+                            break;
+                        }
+                    default: break;
+                }
             }
         }
 
