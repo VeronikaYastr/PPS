@@ -17,7 +17,7 @@ namespace UniversitySite {
 	public static class  LoginController {
        
 		/// 
-		/// <param name="login"></param>
+		/// <param name="login">Login of user</param>
 		private static bool CheckLogin(string login){
             int maxLen = 20;
 
@@ -25,7 +25,7 @@ namespace UniversitySite {
 		}
 
 		/// 
-		/// <param name="password"></param>
+		/// <param name="password">Password of user</param>
 		private static bool CheckPassword(string password){
             int maxLen = 20;
 
@@ -38,9 +38,8 @@ namespace UniversitySite {
             m_dbConn.Open();
 
             User user = null;
-            string sqlQuery = "SELECT TypeID FROM 'USER' WHERE LOGIN =\"" + login + "\"";
-            sqlQuery += " AND PASSWORD=\"" + password + "\";";
-            SQLiteCommand comm = new SQLiteCommand(sqlQuery, m_dbConn);
+            string sql = String.Format("SELECT TypeID FROM 'USER' WHERE LOGIN = \"{0}\" AND PASSWORD= \"{1}\";", login, password );
+            SQLiteCommand comm = new SQLiteCommand(sql, m_dbConn);
             SQLiteDataReader reader = comm.ExecuteReader();
 
             string str = "";

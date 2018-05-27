@@ -20,6 +20,24 @@ namespace UniversitySite
             return reader;
         }
 
+        public static bool ExecuteReadSql(string sql)
+        {
+            try
+            {
+                SQLiteConnection m_dbConn = new SQLiteConnection("Data Source= C:\\Users\\Veronika\\Desktop\\programming\\labs_4\\PPS\\UniversitySite\\Database.db;Version=3;");
+                m_dbConn.Open();
+
+                SQLiteCommand comm = new SQLiteCommand(sql, m_dbConn);
+                comm.ExecuteNonQuery();
+            }
+            catch(SQLiteException ex)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
         public static int DepMaxCode()
         {
             string sql = "SELECT max(DEPCODE) FROM 'DEPARTMENT';";

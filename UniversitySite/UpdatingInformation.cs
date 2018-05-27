@@ -15,35 +15,32 @@ namespace UniversitySite {
 	/// <summary>
 	/// Обновление информации в банке данных
 	/// </summary>
-	public class  UpdatingInformation {
+	public static class  UpdatingInformation {
 
-		/// 
-		/// <param name="item"></param>
-		public bool updateHistory(Head item){
-
-			return false;
+        /// 
+        /// <param name="name">Name of leader</param>
+        /// <param name="year">Start date of working</param>
+        public static bool UpdateHistory(string name, int year){
+            string sql = String.Format("UPDATE 'LEADER' SET STARTDATE= {0} WHERE NAME= \"{1}\";", year, name);
+            return (GetInfo.ExecuteReadSql(sql));
 		}
 
         /// 
-        /// <param name="subject"></param>
-        public bool updateSubjects(string subject)
-        {
-            return false;
+        /// <param name="score">Passing score on subject</param>
+        /// <param name="name">Name of subject</param>
+        public static bool UpdateMaxScore(string name, int score){
+            string sql = String.Format("UPDATE 'SUBJECT' SET PASSINGSCORE= {0} WHERE SUBJNAME= \"{1}\";", score, name);
+            return (GetInfo.ExecuteReadSql(sql));
+		}
+
+        /// 
+        /// <param name="amount">Amount of people in plan</param>
+        /// <param name="name">Name of speciality</param>
+        public static bool UpdatePlanOfAdmission(string name, int amount){
+            string sql = String.Format("UPDATE 'PLANOFADMISSION' SET AMOUNT= {0} WHERE SPECIID= " +
+                "(SELECT SPECID FROM 'SPECIALITY' WHERE SNAME = \"{1}\") ;", amount, name);
+            return (GetInfo.ExecuteReadSql(sql));
         }
-
-        /// 
-        /// <param name="score"></param>
-        public bool updateMaxScore(double score){
-
-			return false;
-		}
-
-		/// 
-		/// <param name="item"></param>
-		public bool updatePlanOfAdmission(string item){
-
-			return false;
-		}
 
 	}//end <<control>> UpdatingInformation
 

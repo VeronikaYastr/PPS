@@ -58,6 +58,9 @@ namespace UniversitySite
                         }
                     case TypeOfRequest.updateInfo:
                         {
+                            this.Hide();
+                            UpdateInfo form = new UpdateInfo();
+                            form.Show();
                             break;
                         }
                     default: break;

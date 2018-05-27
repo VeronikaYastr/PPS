@@ -92,12 +92,6 @@
     <Compile Include="ChooseAction.Designer.cs">
       <DependentUpon>ChooseAction.cs</DependentUpon>
     </Compile>
-    <Compile Include="ErrorForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ErrorForm.Designer.cs">
-      <DependentUpon>ErrorForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="FindInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +104,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GetInfo.cs" />
     <Compile Include="KeyAbstractions.cs" />
     <Compile Include="ListOfLeaders.cs">
       <SubType>Form</SubType>
@@ -138,15 +133,18 @@
     <Compile Include="RequestFindForm.Designer.cs">
       <DependentUpon>RequestFindForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateInfo.Designer.cs">
+      <DependentUpon>UpdateInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdatingInformation.cs" />
     <EmbeddedResource Include="AddInfo.resx">
       <DependentUpon>AddInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChooseAction.resx">
       <DependentUpon>ChooseAction.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ErrorForm.resx">
-      <DependentUpon>ErrorForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FindInfo.resx">
       <DependentUpon>FindInfo.cs</DependentUpon>
@@ -175,6 +173,9 @@
     <Content Include="DesignModel.sql" />
     <EmbeddedResource Include="RequestFindForm.resx">
       <DependentUpon>RequestFindForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateInfo.resx">
+      <DependentUpon>UpdateInfo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

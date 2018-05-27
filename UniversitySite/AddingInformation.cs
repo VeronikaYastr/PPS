@@ -20,77 +20,87 @@ namespace UniversitySite {
 
         public static bool AddInfo(Department dep, Speciality spec, Faculty fac,Head head, string address, string phone, string site, int year, FormOfEducation form)
         {
-            if (dep != null)
-                AddDepartment(dep);
-            if (head != null)
-                AddHead(head);
-            if (address.Length != 0)
-                AddAddress(address);
-            if (phone.Length != 0)
-                AddPhone(phone);
-            if (site.Length != 0)
-                AddWebsite(site);
-            AddForm(form);
+            if (!AddContactInfo(phone, site, address, spec))
+                return false;
+            if (!AddEducationalUnit(dep, fac, spec, form))
+                return false;
+            if (!AddHead(head, dep, fac, spec, year))
+                return false;
 
-            return AddForm(form);
+            return true;
         }
 
 
         /// 
-        /// <param name="item"></param>
-        public static bool AddAddress(string item){
+        /// <param name="phone">Phone number of university</param>
+        /// <param name="site">Website of university</param>
+        /// <param name="address">Address of university</param>
+        public static bool AddContactInfo(string phone, string site, string address, Speciality spec){
+            try
+            {
+                string sql = String.Format("INSERT INTO 'CONTACTINFO' (ADDRESS, PHONENUMBER, WEBSITE, SPECID) VALUES ('{0}', '{1}', '{2}', {3});",
+                    address, phone, site, spec.Code);
+                if (!GetInfo.ExecuteReadSql(sql))
+                    return false;
+            }
+            catch (SQLiteException ex)
+            {
+                return false;
+            }
 
-			return false;
+            return true;
+        }
+
+        /// 
+        /// <param name="dep">Department of university</param>
+        /// <param name="fac">Faculty of university</param>
+        /// <param name="spec">Speciality of university</param>
+        /// <param name="form">Form of education</param>
+        public static bool AddEducationalUnit(Department dep, Faculty fac, Speciality spec, FormOfEducation form){
+            try
+            {
+                string sql = String.Format("INSERT INTO 'DEPARTMENT' (DEPCODE, DEPNAME, DEPSHORTNAME) VALUES ({0}, '{1}', '{2}');",
+                    dep.Code, dep.Name, dep.ShortName);
+                if (!GetInfo.ExecuteReadSql(sql))
+                    return false;
+                sql = String.Format("INSERT INTO 'FACULTY' (FACCODE, FACNAME, FACSHORTNAME, DEPRID) VALUES ({0}, '{1}', '{2}', {3});",
+                    fac.Code, fac.Name, fac.ShortName, dep.Code);
+                if (!GetInfo.ExecuteReadSql(sql))
+                    return false;
+                sql = String.Format("INSERT INTO 'SPECIALITY' (SCODE, SNAME, SSHORTNAME, FAID, FORMID, DEPARID) VALUES ({0}, '{1}', '{2}', {3}, {4}, {5});",
+                    spec.Code, spec.Name, spec.ShortName, fac.Code, (int)form, dep.Code);
+                if (!GetInfo.ExecuteReadSql(sql))
+                    return false;
+            }
+            catch(SQLiteException ex)
+            {
+                return false;
+            }
+
+            return true;
 		}
 
-		/// 
-		/// <param name="item"></param>
-		public static bool AddDepartment(Department item){
-            
-			return false;
-		}
+        /// 
+        /// <param name="item">Head of the university</param>
+        /// <param name="dep">Department of university</param>
+        /// <param name="fac">Faculty of university</param>
+        /// <param name="spec">Speciality of university</param>
+        public static bool AddHead(Head item, Department dep, Faculty fac, Speciality spec, int year)
+        {
+            try
+            {
+                string sql = String.Format("INSERT INTO 'LEADER' (NAME, SCDEGREE, SCRANK, STARTDATE,SID,DPID,FCID) VALUES ('{0}', '{1}', '{2}', {3}, {4}, {5},{6});",
+                    item.Name, item.ScDegree, item.ScRank, year, spec.Code, dep.Code, fac.Code);
+                if (!GetInfo.ExecuteReadSql(sql))
+                    return false;
+            }
+            catch (SQLiteException ex)
+            {
+                return false;
+            }
 
-		/// 
-		/// <param name="item"></param>
-		public static bool AddFaculty(Faculty item){
-
-			return false;
-		}
-
-		/// 
-		/// <param name="form"></param>
-		public static bool AddForm(FormOfEducation form){
-
-			return false;
-		}
-
-		/// 
-		/// <param name="item"></param>
-		public static bool AddHead(Head item){
-
-			return false;
-		}
-
-		/// 
-		/// <param name="item"></param>
-		public static bool AddPhone(string item){
-
-			return false;
-		}
-
-		/// 
-		/// <param name="item"></param>
-		public static bool AddSpeciality(Speciality item){
-
-			return false;
-		}
-
-		/// 
-		/// <param name="item"></param>
-		public static bool AddWebsite(string item){
-
-			return false;
-		}
+            return true;
+        }
 
 	}//end <<control>> AddingInformation
 

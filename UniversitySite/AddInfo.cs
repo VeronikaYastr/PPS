@@ -46,20 +46,20 @@ namespace UniversitySite
             FormOfEducation edForm = FormOfEducation.intramuralForm;
 
             if (textBoxDep.Text.Length != 0)
-                dep = new Department(GetInfo.DepMaxCode(), textBoxDep.Text);
-            else if (textBoxFac.Text.Length != 0)
-                fac = new Faculty(GetInfo.FacMaxCode(), textBoxFac.Text);
-            else if (textBoxSpec.Text.Length != 0)
-                spec = new Speciality(GetInfo.SpecMaxCode(), textBoxFac.Text);
-            else if (textBoxYear.Text.Length != 0 && CheckingInfo.CheckCorectness(textBoxYear.Text))
+                dep = new Department(GetInfo.DepMaxCode() + 1, textBoxDep.Text);
+            if (textBoxFac.Text.Length != 0)
+                fac = new Faculty(GetInfo.FacMaxCode() + 1, textBoxFac.Text);
+            if (textBoxSpec.Text.Length != 0)
+                spec = new Speciality(GetInfo.SpecMaxCode() + 1, textBoxFac.Text);
+            if (textBoxYear.Text.Length != 0 && CheckingInfo.CheckCorectness(textBoxYear.Text))
                 year = Int32.Parse(textBoxYear.Text);
-            else if (textBoxName.Text.Length != 0 && textBoxRank.Text.Length != 0 && textBoxDegree.Text.Length != 0)
+            if (textBoxName.Text.Length != 0 && textBoxRank.Text.Length != 0 && textBoxDegree.Text.Length != 0)
                 head = new Head(year, textBoxName.Text, textBoxDegree.Text, textBoxRank.Text);
-            else if (textBoxAddress.Text.Length != 0)
+            if (textBoxAddress.Text.Length != 0)
                 address = textBoxAddress.Text;
-            else if (textBoxPhone.Text.Length != 0)
+            if (textBoxPhone.Text.Length != 0)
                 phone = textBoxPhone.Text;
-            else if (textBoxSite.Text.Length != 0)
+            if (textBoxSite.Text.Length != 0)
                 site = textBoxSite.Text;
 
             if (RBExtramural.Checked)
@@ -67,7 +67,10 @@ namespace UniversitySite
             if (RBPart.Checked)
                 edForm = FormOfEducation.partTimeForm;
 
-            AddingInformation.AddInfo(dep, spec, fac, head, address, phone, site, year, edForm);
+            if (AddingInformation.AddInfo(dep, spec, fac, head, address, phone, site, year, edForm))
+                MessageBox.Show("Successfully added!");
+            else
+                MessageBox.Show("Error! Try again");
         }
     }
 }

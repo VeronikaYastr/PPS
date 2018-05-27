@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RequestFindForm));
             this.label1 = new System.Windows.Forms.Label();
             this.RBPlan = new System.Windows.Forms.RadioButton();
             this.RBSpecialities = new System.Windows.Forms.RadioButton();
@@ -119,6 +120,7 @@
             this.Controls.Add(this.RBSpecialities);
             this.Controls.Add(this.RBPlan);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RequestFindForm";
             this.Text = "RequestFindForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RequestFindForm_FormClosing);

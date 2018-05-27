@@ -45,9 +45,9 @@ namespace UniversitySite
     /// </summary>
     public class Faculty
     {
-        private int Code { get; set; }
-        private string Name { get; set; }
-        private string ShortName { get; set; }
+        public int Code { get; private set; }
+        public String Name { get; private set; }
+        public string ShortName { get; private set; }
 
         public Faculty(int code, string name)
         {
@@ -63,9 +63,9 @@ namespace UniversitySite
     /// </summary>
     public class Department
     {
-        private int Code { get; set; }
-        private string Name { get; set; }
-        private string ShortName { get; set; }
+        public int Code { get; private set; }
+        public String Name { get; private set; }
+        public string ShortName { get; private set; }
 
         public Department(int code, string name)
         {
@@ -81,11 +81,11 @@ namespace UniversitySite
     /// </summary>
     public class Head
     {
-        private string Name { get; set; }
-        private string ScDegree { get; set; }
-        private string ScRank { get; set; }
-        private int StartDate { get; set; }
-        private int EndDate { get; set; }
+        public string Name { get; private set; }
+        public string ScDegree { get; private set; }
+        public string ScRank { get; private set; }
+        public int StartDate { get; private set; }
+        public int EndDate { get; private set; }
 
         public Head(int year, string name, string degree, string rank)
         {
@@ -133,9 +133,9 @@ namespace UniversitySite
     /// </summary>
     public class Speciality
     {
-        private int Code { get; set; }
-        private string Name { get; set; }
-        private string ShortName { get; set; }
+        public int Code { get; private set; }
+        public String Name { get; private set; }
+        public string ShortName { get; private set; }
 
         public Speciality(int code, string name)
         {

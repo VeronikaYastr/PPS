@@ -19,8 +19,8 @@ namespace UniversitySite {
 	public static class CheckingInfo {
 
         /// 
-        /// <param name="userType"></param>
-        /// <param name="reqType"></param>
+        /// <param name="userType">Type of user</param>
+        /// <param name="reqType">Type of request</param>
         public static bool CheckAccess(TypeOfUser userType, TypeOfRequest reqType){
             if (reqType == TypeOfRequest.addInfo && userType == TypeOfUser.administrator)
                 return true;
@@ -33,7 +33,7 @@ namespace UniversitySite {
 		}
 
 		/// 
-		/// <param name="info"></param>
+		/// <param name="info">Info for checking</param>
 		public static bool CheckCorectness(string info){
             int year = 0;
             try

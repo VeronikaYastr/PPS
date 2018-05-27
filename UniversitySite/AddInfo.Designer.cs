@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddInfo));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -135,7 +136,7 @@
             this.ButtonAdd.BackColor = System.Drawing.Color.PowderBlue;
             this.ButtonAdd.Font = new System.Drawing.Font("Baskerville Old Face", 12F);
             this.ButtonAdd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.ButtonAdd.Location = new System.Drawing.Point(297, 714);
+            this.ButtonAdd.Location = new System.Drawing.Point(297, 682);
             this.ButtonAdd.Name = "ButtonAdd";
             this.ButtonAdd.Size = new System.Drawing.Size(280, 41);
             this.ButtonAdd.TabIndex = 15;
@@ -354,6 +355,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddInfo";

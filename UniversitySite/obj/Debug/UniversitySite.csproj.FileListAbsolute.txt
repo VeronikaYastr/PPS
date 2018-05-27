@@ -11,7 +11,6 @@ C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\UniversitySite\b
 C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\UniversitySite\bin\Debug\System.Data.SQLite.xml
 C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\UniversitySite\bin\Debug\System.Data.SQLite.dll.config
 C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\UniversitySite\obj\Debug\UniversitySite.csprojResolveAssemblyReference.cache
-C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\UniversitySite\obj\Debug\UniversitySite.ErrorForm.resources
 C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\UniversitySite\obj\Debug\UniversitySite.LoginForm.resources
 C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\UniversitySite\obj\Debug\UniversitySite.Properties.Resources.resources
 C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\UniversitySite\obj\Debug\UniversitySite.csproj.GenerateResource.Cache
@@ -25,3 +24,4 @@ C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\UniversitySite\o
 C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\UniversitySite\obj\Debug\UniversitySite.PlanOfAdmission.resources
 C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\UniversitySite\obj\Debug\UniversitySite.MaxScore.resources
 C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\UniversitySite\obj\Debug\UniversitySite.AddInfo.resources
+C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\UniversitySite\obj\Debug\UniversitySite.UpdateInfo.resources

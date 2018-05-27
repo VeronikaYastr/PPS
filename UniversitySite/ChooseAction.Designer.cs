@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChooseAction));
             this.RButtonAdd = new System.Windows.Forms.RadioButton();
             this.RButtonUpdate = new System.Windows.Forms.RadioButton();
             this.RButtonFind = new System.Windows.Forms.RadioButton();
@@ -94,6 +95,7 @@
             this.Controls.Add(this.RButtonUpdate);
             this.Controls.Add(this.RButtonAdd);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ChooseAction";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChooseAction";
