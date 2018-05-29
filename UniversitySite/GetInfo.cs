@@ -9,9 +9,9 @@ namespace UniversitySite
 {
     public static class GetInfo
     {
-        private static SQLiteDataReader ExecuteSql(string sql)
+        public static SQLiteDataReader ExecuteSql(string sql)
         {
-            SQLiteConnection m_dbConn = new SQLiteConnection("Data Source= C:\\Users\\Veronika\\Desktop\\programming\\labs_4\\PPS\\UniversitySite\\Database.db;Version=3;");
+            SQLiteConnection m_dbConn = new SQLiteConnection("Data Source= Database.db;Version=3;");
             m_dbConn.Open();
 
             SQLiteCommand comm = new SQLiteCommand(sql, m_dbConn);
@@ -24,7 +24,7 @@ namespace UniversitySite
         {
             try
             {
-                SQLiteConnection m_dbConn = new SQLiteConnection("Data Source= C:\\Users\\Veronika\\Desktop\\programming\\labs_4\\PPS\\UniversitySite\\Database.db;Version=3;");
+                SQLiteConnection m_dbConn = new SQLiteConnection("Data Source= Database.db;Version=3;");
                 m_dbConn.Open();
 
                 SQLiteCommand comm = new SQLiteCommand(sql, m_dbConn);

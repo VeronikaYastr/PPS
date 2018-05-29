@@ -33,6 +33,8 @@
             this.RButtonUpdate = new System.Windows.Forms.RadioButton();
             this.RButtonFind = new System.Windows.Forms.RadioButton();
             this.ButtonChoose = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // RButtonAdd
@@ -85,11 +87,31 @@
             this.ButtonChoose.UseVisualStyleBackColor = false;
             this.ButtonChoose.Click += new System.EventHandler(this.ButtonChoose_Click);
             // 
+            // label1
+            // 
+            this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
+            this.label1.Location = new System.Drawing.Point(544, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 50);
+            this.label1.TabIndex = 4;
+            // 
+            // labelName
+            // 
+            this.labelName.AutoSize = true;
+            this.labelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.labelName.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.labelName.Location = new System.Drawing.Point(615, 13);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(0, 25);
+            this.labelName.TabIndex = 5;
+            // 
             // ChooseAction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 466);
+            this.Controls.Add(this.labelName);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.ButtonChoose);
             this.Controls.Add(this.RButtonFind);
             this.Controls.Add(this.RButtonUpdate);
@@ -102,6 +124,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ChooseAction_FormClosing);
             this.Load += new System.EventHandler(this.ChooseAction_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -111,5 +134,7 @@
         private System.Windows.Forms.RadioButton RButtonUpdate;
         private System.Windows.Forms.RadioButton RButtonFind;
         private System.Windows.Forms.Button ButtonChoose;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelName;
     }
 }

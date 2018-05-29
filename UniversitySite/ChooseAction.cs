@@ -17,6 +17,7 @@ namespace UniversitySite
         {
             InitializeComponent();
             user = curUser;
+            labelName.Text = user.Login;
         }
 
         private void RButtonAdd_CheckedChanged(object sender, EventArgs e)
@@ -70,8 +71,8 @@ namespace UniversitySite
 
         private void ChooseAction_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Form form1 = System.Windows.Forms.Application.OpenForms["LoginForm"];
-            form1.Close();
+            Form form1 = Application.OpenForms["LoginForm"];
+            form1.Show();
         }
 
         private void ChooseAction_Load(object sender, EventArgs e)

@@ -36,8 +36,8 @@ namespace UniversitySite
 
         private void UpdateInfo_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Form form1 = System.Windows.Forms.Application.OpenForms["ChooseAction"]; ;
-            form1.Close();
+            Form form1 = Application.OpenForms["ChooseAction"]; ;
+            form1.Show();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -70,6 +70,11 @@ namespace UniversitySite
             }
             else
                 MessageBox.Show("Incorrect info!");
+        }
+
+        private void UpdateInfo_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

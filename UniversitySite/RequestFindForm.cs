@@ -26,19 +26,19 @@ namespace UniversitySite
         {
             if(RBLeaders.Checked)
             {
-                this.Hide();
+                Hide();
                 ListOfLeaders form = new ListOfLeaders(year);
                 form.Show();
             }
             if(RBSpecialities.Checked || RBPlan.Checked)
             {
-                this.Hide();
+                Hide();
                 PlanOfAdmission form = new PlanOfAdmission(edForm, year);
                 form.Show();
             }
             if (RBMaxScore.Checked)
             {
-                this.Hide();
+                Hide();
                 MaxScore form = new MaxScore(year);
                 form.Show();
             }
@@ -46,8 +46,8 @@ namespace UniversitySite
 
         private void RequestFindForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Form form1 = System.Windows.Forms.Application.OpenForms["FindInfo"]; ;
-            form1.Close();
+            Form form1 = Application.OpenForms["FindInfo"]; ;
+            form1.Show();
         }
 
         private void RequestFindForm_Load(object sender, EventArgs e)

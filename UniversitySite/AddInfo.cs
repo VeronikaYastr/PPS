@@ -29,8 +29,8 @@ namespace UniversitySite
 
         private void AddInfo_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Form form1 = System.Windows.Forms.Application.OpenForms["ChooseAction"]; ;
-            form1.Close();
+            Form form1 = Application.OpenForms["ChooseAction"]; ;
+            form1.Show();
         }
 
         private void ButtonAdd_Click(object sender, EventArgs e)

@@ -31,14 +31,11 @@ namespace UniversitySite
         {
             try
             {
-                SQLiteConnection m_dbConn = new SQLiteConnection("Data Source= C:\\Users\\Veronika\\Desktop\\programming\\labs_4\\PPS\\UniversitySite\\Database.db;Version=3;");
-                m_dbConn.Open();
-                
                 string sqlQuery = "SELECT SNAME,AMOUNT FROM 'PLANOFADMISSION'" +
                 " INNER JOIN 'SPECIALITY' ON SPECIID=SPECID " +
                 " WHERE PLAN_YEAR = " + year + " AND FORMID = " + (int)form + ";";
-                SQLiteCommand comm = new SQLiteCommand(sqlQuery, m_dbConn);
-                SQLiteDataReader reader = comm.ExecuteReader();
+
+                SQLiteDataReader reader = GetInfo.ExecuteSql(sqlQuery);
                 if (reader.HasRows)
                 {
                     while (reader.Read())
@@ -54,7 +51,6 @@ namespace UniversitySite
                     dataGridPlan.Visible = false;
                     label2.Text = "Such information is not found!";
                 }
-                m_dbConn.Close();
             }
             catch (SQLiteException ex)
             {
@@ -64,8 +60,8 @@ namespace UniversitySite
 
         private void PlanOfAdmission_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Form form1 = System.Windows.Forms.Application.OpenForms["RequestFindForm"]; ;
-            form1.Close();
+            Form form1 = Application.OpenForms["RequestFindForm"]; ;
+            form1.Show();
         }
     }
 }

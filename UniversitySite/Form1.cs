@@ -35,7 +35,7 @@ namespace UniversitySite
             else
             {
                 MessageBox.Show("You are welcome:)");
-                this.Hide();
+                Hide();
                 ChooseAction Action = new ChooseAction(user);
                 Action.Show();
             }

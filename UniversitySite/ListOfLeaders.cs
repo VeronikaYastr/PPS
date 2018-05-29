@@ -30,15 +30,12 @@ namespace UniversitySite
         {
             try
             {
-                SQLiteConnection m_dbConn = new SQLiteConnection("Data Source= C:\\Users\\Veronika\\Desktop\\programming\\labs_4\\PPS\\UniversitySite\\Database.db;Version=3;");
-                m_dbConn.Open();
-
                 string sqlQuery = "SELECT NAME,SCDEGREE,SCRANK,STARTDATE,SNAME,FACNAME,DEPNAME FROM 'LEADER'"+ 
                 " INNER JOIN 'SPECIALITY' ON SID=SPECID INNER JOIN 'FACULTY' ON FAID=FACID " +
                 "INNER JOIN 'DEPARTMENT' ON DEPRID=DEPID" +
                 " WHERE STARTDATE <= " + year + " AND SCDEGREE = \"doctor\" AND SCRANK=\"professor\";";
-                SQLiteCommand comm = new SQLiteCommand(sqlQuery, m_dbConn);
-                SQLiteDataReader reader = comm.ExecuteReader();
+
+                SQLiteDataReader reader = GetInfo.ExecuteSql(sqlQuery);
                 if (reader.HasRows)
                 {
                     while (reader.Read())
@@ -59,8 +56,7 @@ namespace UniversitySite
                     dataGridLeaders.Visible = false;
                     label2.Text = "Such information is not found!";
                 }
-
-                m_dbConn.Close();
+                
             }
             catch (SQLiteException ex)
             {
@@ -70,8 +66,8 @@ namespace UniversitySite
 
         private void ListOfLeaders_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Form form1 = System.Windows.Forms.Application.OpenForms["RequestFindForm"]; ;
-            form1.Close();
+            Form form1 = Application.OpenForms["RequestFindForm"]; ;
+            form1.Show();
         }
     }
 }

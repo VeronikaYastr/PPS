@@ -19,8 +19,8 @@ namespace UniversitySite
 
         private void FindInfo_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Form form1 = System.Windows.Forms.Application.OpenForms["ChooseAction"]; ;
-            form1.Close();
+            Form form1 = Application.OpenForms["ChooseAction"]; ;
+            form1.Show();
         }
 
         private void ButtonFind_Click(object sender, EventArgs e)
@@ -39,7 +39,7 @@ namespace UniversitySite
 
                 int year = Int32.Parse(textYear.Text);
 
-                this.Hide();
+                Hide();
                 RequestFindForm reqForm = new RequestFindForm(form, year);
                 reqForm.Show();
             }

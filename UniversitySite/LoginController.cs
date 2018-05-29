@@ -34,7 +34,7 @@ namespace UniversitySite {
 
         public static User MakeUser(string login, string password)
         {
-            SQLiteConnection m_dbConn = new SQLiteConnection("Data Source= C:\\Users\\Veronika\\Desktop\\programming\\labs_4\\PPS\\UniversitySite\\Database.db;Version=3;");
+            SQLiteConnection m_dbConn = new SQLiteConnection("Data Source= Database.db;Version=3;");
             m_dbConn.Open();
 
             User user = null;
