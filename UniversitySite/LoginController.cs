@@ -18,7 +18,7 @@ namespace UniversitySite {
        
 		/// 
 		/// <param name="login">Login of user</param>
-		private static bool CheckLogin(string login){
+		public static bool CheckLogin(string login){
             int maxLen = 20;
 
             return (login.Length != 0 && login.Length <= maxLen);
@@ -26,7 +26,7 @@ namespace UniversitySite {
 
 		/// 
 		/// <param name="password">Password of user</param>
-		private static bool CheckPassword(string password){
+		public static bool CheckPassword(string password){
             int maxLen = 20;
 
             return (password.Length != 0 && password.Length <= maxLen);

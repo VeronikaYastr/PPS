@@ -1,0 +1,16 @@
+C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\Login.Test\bin\Debug\netstandard1.4\NUnit3.TestAdapter.dll
+C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\Login.Test\bin\Debug\netstandard1.4\NUnit3.TestAdapter.pdb
+C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\Login.Test\bin\Debug\netstandard1.4\nunit.engine.dll
+C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\Login.Test\bin\Debug\netstandard1.4\nunit.engine.api.dll
+C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\Login.Test\bin\Debug\netstandard1.4\Mono.Cecil.dll
+C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\Login.Test\bin\Debug\netstandard1.4\Login.Test.deps.json
+C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\Login.Test\bin\Debug\netstandard1.4\Login.Test.dll
+C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\Login.Test\bin\Debug\netstandard1.4\UniversitySite.exe
+C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\Login.Test\bin\Debug\netstandard1.4\System.Data.SQLite.dll
+C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\Login.Test\bin\Debug\netstandard1.4\UniversitySite.pdb
+C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\Login.Test\bin\Debug\netstandard1.4\UniversitySite.exe.config
+C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\Login.Test\bin\Debug\netstandard1.4\System.Data.SQLite.xml
+C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\Login.Test\bin\Debug\netstandard1.4\System.Data.SQLite.dll.config
+C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\Login.Test\obj\Debug\netstandard1.4\Login.Test.csprojResolveAssemblyReference.cache
+C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\Login.Test\obj\Debug\netstandard1.4\Login.Test.csproj.CoreCompileInputs.cache
+C:\Users\Veronika\Desktop\programming\labs_4\PPS\UniversitySite\Login.Test\obj\Debug\netstandard1.4\Login.Test.AssemblyInfo.cs

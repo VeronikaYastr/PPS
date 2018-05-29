@@ -70,7 +70,7 @@ namespace UniversitySite
 
         private void ChooseAction_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Form form1 = System.Windows.Forms.Application.OpenForms["LoginForm"]; ;
+            Form form1 = System.Windows.Forms.Application.OpenForms["LoginForm"];
             form1.Close();
         }
 
